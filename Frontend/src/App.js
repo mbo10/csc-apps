@@ -66,6 +66,17 @@ function App() {
                 {itemsToRender}
               </Table.Body>
 
+              <Table.Footer>
+                <Table.Row>
+                  <Table.HeaderCell>Showing {numRows} Apps</Table.HeaderCell>
+                  <Table.HeaderCell />
+                  <Table.HeaderCell />
+                  <Table.HeaderCell />
+                  <Table.HeaderCell>{numRun} Running & {numStop} Stopped</Table.HeaderCell>
+                  <Table.HeaderCell />
+                </Table.Row>
+              </Table.Footer>
+            </Table>
           </div>  
           </>
 };
