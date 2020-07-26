@@ -12,3 +12,22 @@ var connect = mysql.createConnection({
 	user: 'root',
 	password: '987m654'
 });
+
+app.use(cors());
+
+var initial_result;
+
+app.get('/', (req, res) => {
+	res.sendFile(__dirname + '/index.html');
+});
+
+io.on('connection', (socket) => {
+	console.log('a user connected');
+	socket.on('disconnect', () => {
+		console.log('user disconnected');
+	});
+	connect.query(SELECT_ALL_APPLICATIONS_QUERY, function(err, result) {
+		initial_result = result;
+		io.emit('table update', Object.values(result));
+	});
+});
