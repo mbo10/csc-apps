@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import socketIOClient from "socket.io-client";
 import { Icon, Label, Menu, Table } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
-import './App.css';
+
 const ENDPOINT = "http://127.0.0.1:4000";
 
 function App() {
