@@ -61,6 +61,11 @@ function App() {
                   <Table.HeaderCell>Environment Name</Table.HeaderCell>
                 </Table.Row>
               </Table.Header>
+
+              <Table.Body>
+                {itemsToRender}
+              </Table.Body>
+
           </div>  
           </>
 };
