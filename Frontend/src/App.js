@@ -49,6 +49,19 @@ function App() {
               CSC Apps
             </div>
           </h1>
+          <div style={{paddingLeft: '70px', float : 'center', paddingRight : '70px'}}> 
+            <Table columns={6} color='green' celled>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell>App Name</Table.HeaderCell>
+                  <Table.HeaderCell>Version Number</Table.HeaderCell>
+                  <Table.HeaderCell>Owner</Table.HeaderCell>
+                  <Table.HeaderCell>Last Updated</Table.HeaderCell>
+                  <Table.HeaderCell>State</Table.HeaderCell>
+                  <Table.HeaderCell>Environment Name</Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
+          </div>  
           </>
 };
 
