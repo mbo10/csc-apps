@@ -31,3 +31,18 @@ io.on('connection', (socket) => {
 		io.emit('table update', Object.values(result));
 	});
 });
+
+setInterval(function(){
+		connect.query(SELECT_ALL_APPLICATIONS_QUERY, function(err, result) {
+			if(err) { throw new Error('Failed');}
+
+			if(JSON.stringify(initial_result) != JSON.stringify(result)) { 
+				io.emit('table update', Object.values(result)); 
+			}
+			initial_result = result;
+		});
+	}, 1000);
+
+http.listen(4000, () => {
+	console.log('listening on *:4000');
+});
